@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Fraunces, Manrope } from "next/font/google";
 
 import { restaurante } from "@/data/restaurante";
+import { SITE_URL } from "@/lib/site";
 import { Navbar } from "@/components/navbar/navbar";
 import { Footer } from "@/components/footer/footer";
 import { WhatsAppFloat } from "@/components/ui/whatsapp-float";
@@ -19,10 +20,9 @@ const manrope = Manrope({
 
 const titulo = `${restaurante.nombre} | Parrilla argentina en ${restaurante.localidad}`;
 const descripcion = `${restaurante.descripcionCorta} Reservá tu mesa online en ${restaurante.nombre}, ${restaurante.localidad}, ${restaurante.provincia}.`;
-const siteUrl = process.env.NEXT_PUBLIC_SITE_URL ?? "https://parrilla-el-refugio.vercel.app";
 
 export const metadata: Metadata = {
-  metadataBase: new URL(siteUrl),
+  metadataBase: new URL(SITE_URL),
   title: {
     default: titulo,
     template: `%s | ${restaurante.nombre}`,
@@ -40,7 +40,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: titulo,
     description: descripcion,
-    url: siteUrl,
+    url: SITE_URL,
     siteName: restaurante.nombre,
     locale: "es_AR",
     type: "website",
@@ -51,7 +51,7 @@ export const metadata: Metadata = {
     description: descripcion,
   },
   alternates: {
-    canonical: siteUrl,
+    canonical: SITE_URL,
   },
 };
 
