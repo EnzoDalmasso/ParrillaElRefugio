@@ -1,0 +1,110 @@
+@import "tailwindcss";
+
+@theme {
+  --color-carbon-950: #0a0908;
+  --color-carbon-900: #14110f;
+  --color-carbon-800: #1e1916;
+  --color-carbon-700: #2a231e;
+  --color-carbon-600: #3a3128;
+
+  --color-wood-700: #5c4028;
+  --color-wood-600: #7a5636;
+  --color-wood-500: #96714b;
+
+  --color-ember-400: #eeae64;
+  --color-ember-500: #db8a3f;
+  --color-ember-600: #b96a2b;
+  --color-ember-700: #8f4f21;
+
+  --color-brasa-600: #9c3b26;
+  --color-brasa-700: #7a2c1b;
+
+  --color-cream-50: #faf6ee;
+  --color-cream-100: #f3ead9;
+  --color-cream-200: #e7d8bf;
+
+  --color-stone-300: #cbc0b2;
+  --color-stone-400: #a79b8b;
+  --color-stone-500: #857a6c;
+  --color-stone-600: #665c50;
+
+  --color-ink-900: #1c1712;
+
+  --font-display: var(--font-fraunces);
+  --font-body: var(--font-manrope);
+
+  --ease-premium: cubic-bezier(0.22, 1, 0.36, 1);
+
+  --animate-ember-drift: ember-drift 6s ease-in-out infinite;
+  --animate-slow-zoom: slow-zoom 20s cubic-bezier(0.22, 1, 0.36, 1) infinite alternate;
+
+  @keyframes ember-drift {
+    0% {
+      transform: translateY(0) translateX(0) scale(1);
+      opacity: 0;
+    }
+    10% {
+      opacity: 0.8;
+    }
+    100% {
+      transform: translateY(-140px) translateX(12px) scale(0.4);
+      opacity: 0;
+    }
+  }
+
+  @keyframes slow-zoom {
+    from {
+      transform: scale(1);
+    }
+    to {
+      transform: scale(1.08);
+    }
+  }
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    color-scheme: dark;
+  }
+}
+
+* {
+  scroll-behavior: smooth;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  * {
+    scroll-behavior: auto;
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+html,
+body {
+  background: var(--color-carbon-950);
+  color: var(--color-cream-50);
+}
+
+body {
+  font-family: var(--font-body), system-ui, sans-serif;
+}
+
+::selection {
+  background: var(--color-ember-500);
+  color: var(--color-carbon-950);
+}
+
+.text-balance {
+  text-wrap: balance;
+}
+
+.scrollbar-none {
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
+.scrollbar-none::-webkit-scrollbar {
+  display: none;
+}
