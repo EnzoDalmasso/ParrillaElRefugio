@@ -1,9 +1,6 @@
 import type { CategoriaMenu, CorteEspecialidad, ProductoMenu } from "@/types";
 
-/**
- * Precios y descripciones de PRODUCTO de esta sección son contenido de DEMO,
- * estructurados para que el restaurante los reemplace por su carta real.
- */
+// Precios y descripciones de ejemplo, falta la carta real
 function unsplash(id: string, w = 1200) {
   return `https://images.unsplash.com/photo-${id}?q=80&w=${w}&auto=format&fit=crop`;
 }

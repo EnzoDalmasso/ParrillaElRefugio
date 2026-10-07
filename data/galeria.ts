@@ -1,10 +1,6 @@
 import type { ImagenGaleria } from "@/types";
 
-/**
- * Imágenes de stock (Unsplash) usadas como contenido de DEMO,
- * fácilmente reemplazables por fotografía real del local.
- * Cada `src` es una foto verificada y curada por temática.
- */
+// Fotos de Unsplash hasta tener fotos del local
 function unsplash(id: string, w = 1600) {
   return `https://images.unsplash.com/photo-${id}?q=80&w=${w}&auto=format&fit=crop`;
 }

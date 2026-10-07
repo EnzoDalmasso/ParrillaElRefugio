@@ -1,10 +1,6 @@
 import type { FranjaHoraria } from "@/types";
 
-/**
- * Configuración y disponibilidad MOCK del sistema de reservas.
- * No representa una reserva real: es contenido de demo pensado para
- * reemplazarse por Server Actions + Supabase (ver lib/reservas/actions.ts).
- */
+// Disponibilidad de prueba hasta que haya una base de datos
 export const HORARIOS_BASE = [
   "20:00",
   "20:30",
@@ -18,10 +14,7 @@ export const PERSONAS_OPCIONES = [1, 2, 3, 4, 5, 6, 7, 8] as const;
 
 export const DIAS_ANTICIPACION_MAXIMA = 30;
 
-/**
- * Genera disponibilidad determinística en base a la fecha y el horario,
- * para que la demo se comporte de forma consistente sin backend real.
- */
+// Usa la fecha como semilla para que el mismo día muestre siempre lo mismo
 export function obtenerDisponibilidadMock(fechaISO: string): FranjaHoraria[] {
   const semilla = fechaISO
     .split("-")

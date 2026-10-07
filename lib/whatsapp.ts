@@ -2,10 +2,6 @@ import { restaurante } from "@/data/restaurante";
 import { formatearFechaCorta } from "@/lib/utils";
 import type { ReservaFormData } from "@/types";
 
-/**
- * Número centralizado de WhatsApp: se lee siempre desde data/restaurante.ts,
- * nunca hardcodeado en los componentes.
- */
 export const WHATSAPP_NUMERO = restaurante.whatsappNumero;
 
 export function construirUrlWhatsApp(mensaje: string) {

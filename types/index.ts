@@ -38,7 +38,6 @@ export interface RestauranteInfo {
   totalResenas: number;
   horarios: HorarioDia[];
   redes: RedSocial[];
-  fuenteDatos: string;
 }
 
 export type CategoriaId =

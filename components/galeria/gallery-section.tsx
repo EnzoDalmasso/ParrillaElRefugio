@@ -9,7 +9,7 @@ export function GallerySection() {
         <SectionTitle
           kicker="Galería"
           title="Un vistazo a la experiencia"
-          description="Fuego, cortes y el ambiente que nos identifica. Fotografías de referencia — se reemplazan por producciones propias del local."
+          description="Fuego, cortes y el ambiente que nos identifica."
           light
         />
         <div className="mt-12">
