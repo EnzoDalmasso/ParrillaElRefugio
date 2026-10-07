@@ -3,7 +3,7 @@ import type { FranjaHoraria } from "@/types";
 /**
  * Configuración y disponibilidad MOCK del sistema de reservas.
  * No representa una reserva real: es contenido de demo pensado para
- * reemplazarse por Server Actions + Supabase (ver lib/reservas/availability.ts).
+ * reemplazarse por Server Actions + Supabase (ver lib/reservas/actions.ts).
  */
 export const HORARIOS_BASE = [
   "20:00",

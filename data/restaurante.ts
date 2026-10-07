@@ -61,6 +61,6 @@ export const reseñasDestacadas = [
   {
     texto:
       "Lindo, me gustó, un ambiente agradable para familia, pareja, encuentro. Una atención esmerada.",
-    fuente: "Nelso Lapolla · Google",
+    fuente: "Reseña de Google",
   },
 ];
