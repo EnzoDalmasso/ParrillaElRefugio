@@ -1,3 +1,3 @@
-const FALLBACK_SITE_URL = "https://parrilla-el-refugio.vercel.app";
+const FALLBACK_SITE_URL = "http://localhost:3000";
 
 export const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL?.trim() || FALLBACK_SITE_URL;

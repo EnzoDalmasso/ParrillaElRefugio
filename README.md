@@ -47,8 +47,4 @@ npm run dev
 
 Queda en http://localhost:3000. También están `npm run lint`, `npm run build` y `npm run start`.
 
-La única variable de entorno que se usa es `NEXT_PUBLIC_SITE_URL` (para metadata y sitemap), y si no está definida toma la URL de Vercel por defecto. Hay un `.env.example` de referencia; el `.env` real no se sube al repo.
-
-## Deploy
-
-Está pensado para Vercel: se importa el repo, se define `NEXT_PUBLIC_SITE_URL` con el dominio final y listo.
+La única variable de entorno es `NEXT_PUBLIC_SITE_URL`, que se usa en la metadata y el sitemap. Si no está definida toma `http://localhost:3000`. Hay un `.env.example` de referencia; el `.env` real no se sube al repo.
