@@ -14,3 +14,9 @@ export const datosClienteSchema = z.object({
 });
 
 export type DatosClienteInput = z.infer<typeof datosClienteSchema>;
+
+export const reservaSchema = datosClienteSchema.extend({
+  fecha: z.string().regex(/^\d{4}-\d{2}-\d{2}$/, "Fecha inválida"),
+  personas: z.number().int().min(1).max(8),
+  horario: z.string().regex(/^\d{2}:\d{2}$/, "Horario inválido"),
+});
